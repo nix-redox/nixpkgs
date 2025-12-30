@@ -255,6 +255,7 @@ let
             || isMinGW
             || isWindows # Windows
             || isWasm # WASM
+            || isRedox
           )
           && !isStatic;
 
@@ -264,7 +265,7 @@ let
         # don't support dynamic linking, but don't get the `staticMarker`.
         # `pkgsStatic` sets `isStatic=true`, so `pkgsStatic.hostPlatform` always
         # has the `staticMarker`.
-        isStatic = final.isWasi || final.isRedox;
+        isStatic = final.isWasi;
 
         # Just a guess, based on `system`
         inherit
