@@ -424,6 +424,15 @@ rec {
     useLLVM = true;
   };
 
+  #
+  # Redox OS
+  #
+  x86_64-redox = {
+    config = "x86_64-unknown-redox";
+    useLLVM = true;
+    linker = "lld";
+  };
+
   # Ghcjs
   ghcjs = {
     # This triple is special to GHC/Cabal/GHCJS and not recognized by autotools
