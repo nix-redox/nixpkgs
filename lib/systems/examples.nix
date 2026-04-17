@@ -356,6 +356,22 @@ rec {
   };
 
   #
+  # Redox
+  #
+
+  aarch64-unknown-redox = {
+    config = "aarch64-unknown-redox";
+    libc = "relibc";
+    useLLVM = true; # This platform doesn't support Gcc yet.
+  };
+
+  x86_64-unknown-redox = {
+    config = "x86_64-unknown-redox";
+    libc = "relibc";
+    useLLVM = true; # This platform doesn't support Gcc yet.
+  };
+
+  #
   # Windows
   #
 
